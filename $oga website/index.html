@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>$OGA | MEME TOKEN</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Modal Styling */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      z-index: 1000;
+    }
+
+    .modal.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-content {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      animation: fadeInScale 0.5s ease forwards;
+    }
+
+    .modal-content h2 {
+      margin-bottom: 1rem;
+      color: #ff6600;
+    }
+
+    .modal-content p {
+      margin-bottom: 1.5rem;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .close-modal {
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #ff6600, #ffcc00);
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .close-modal:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes fadeInScale {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h2>$OGA</h2>
+    </div>
+
+    <!-- Hamburger menu -->
+    <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+
+    <!-- Sidebar navigation -->
+    <nav class="side-bar" id="sidebar">
+      <ul>
+        <li><a href="#">Chart</a></li>
+        <li><a href="#">Buy Now</a></li>
+        <li><a href="#">Join Community</a></li>
+        <li><a href="#" class="copy-ca"><button class="copy-btn">Copy Ca</button></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Modal -->
+  <div class="modal" id="welcomeModal">
+    <div class="modal-content">
+      <h2>Welcome to $OGA </h2>
+      <p>The cat’s out of the bag! <br>explore the gallery, and join the pride. Click below to begin.</p>
+      <button class="close-modal" id="closeModal">Enter</button>
+    </div>
+  </div>
+
+  <section class="hero-sec">
+    <video src="Assets/Untitled_Artwork.mp4" autoplay muted loop></video>
+    <div class="hero-content">
+      The cat’s out of the bag, it’s $OGA time.
+    </div>
+    <button class="buy-now">Buy Now</button>
+  </section>
+
+  <section class="scrolling-text">
+    <div class="scroll-container">
+        <span> $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA </span>
+        <span>$OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA  </span>
+        <span>$OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA $OGA </span>
+    </div>
+  </section>
+
+  <section class="about-sec">
+    <h2>ABOUT</h2>
+    <div class="about">
+      <img src="Assets/IMG_7976.PNG" alt="First PFP" />
+      <p class="about-content">The Alley Cat Origin From neon alleys to near-myth, $OGA was the fearless stray—dodging dogs, stealing fish, and becoming a symbol of survival and mischief.</p>
+    </div>
+    <div class="about">
+      <img src="Assets/IMG_7998.PNG" alt="Second PFP" />
+      <p class="about-content">The Meme Revolution One wide-eyed cat sparked a movement. Memes spread, chaos followed, and $OGA clawed its way onto the blockchain.</p>
+    </div>
+    <div class="about">
+      <img src="Assets/IMG_8022.PNG" alt="Third PFP" />
+      <p class="about-content">The Future of $OGA $OGA is more than a meme, it’s a fearless, community-driven token where the pride builds a future with cats at the top of the charts.</p>
+    </div>
+  </section>
+
+  <section class="meme-gallery" id="meme-gallery"> 
+    <h2>Gallery</h2>
+    <div class="slider" id="slider">
+      <div class="slider-track" id="slider-track">
+        <img src="Assets/IMG_7993.PNG" alt="Meme 1" />
+        <img src="Assets/IMG_7999.PNG" alt="Meme 2" />
+        <img src="Assets/IMG_8016.PNG" alt="Meme 3" />
+        <img src="Assets/IMG_8008.PNG" alt="Meme 4" />
+        <img src="Assets/IMG_7989.PNG" alt="Meme 5" />
+        <img src="Assets/IMG_7990.PNG" alt="Meme 6" />
+        <img src="Assets/IMG_7993.PNG" alt="Meme 1" />
+        <img src="Assets/IMG_7999.PNG" alt="Meme 2" />
+        <img src="Assets/IMG_8016.PNG" alt="Meme 3" />
+        <img src="Assets/IMG_8008.PNG" alt="Meme 4" />
+        <img src="Assets/IMG_7989.PNG" alt="Meme 5" />
+        <img src="Assets/IMG_7990.PNG" alt="Meme 6" />
+      </div>
+    </div>
+  </section>
+  <footer class="social-footer">
+    <div class="footer-video">
+      <video src="Assets/Untitled_Artwork (1).mp4" muted loop autoplay></video>
+    </div>
+
+    <div class="footer-community">
+      <h2>$OGA</h2>
+      <div class="social-links">
+        <a href="#" target="_blank" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank" class="social-icon telegram"><i class="fab fa-telegram"></i></a>
+        <a href="#" target="_blank" title="dexscreener" class="social-icon dexscreener"><i class="fas fa-chart-line"></i></a>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="script.js"></script>
+  <script>
+    // Show modal on page load
+    const modal = document.getElementById('welcomeModal');
+    const closeModalBtn = document.getElementById('closeModal');
+
+    window.addEventListener('load', () => {
+      modal.classList.add('active');
+    });
+
+    // Close modal when button clicked
+    closeModalBtn.addEventListener('click', () => {
+      modal.classList.remove('active');
+    });
+
+    // Close modal if clicking outside content
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>
